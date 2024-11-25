@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+        .div1{
+            height: 25vw;
+            width: 25vw;
+            background-color: purple;
+            border-radius: 10%;
+            overflow: scroll;
+        }
+        .div2{
+            background-color: blue;
+            height: 2vw;
+            border-radius: 10%;
+            padding: 1vw;
+            
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-evenly;
+            
+        }
+        .inp1{
+            height: 2vw;
+            width: 60%;
+            font-size: 1vw;
+            font-weight: bold;
+            border-radius: 5%;
+        }
+        .btn1{
+                height: 2vw;
+                width: 7vw;
+                background-color: red;
+                color: white;
+                font-size: 1vw;
+                font-weight: bold;
+                border-radius: 5%;
+        }
+        #newDiv{
+                height: 3vw;
+                /* background-color: red; */
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+        }
+        p{
+            width: 10vw;
+            height: 1.5vw;
+            background-color: whitesmoke;
+            color:black;
+            font-size: 1vw;
+            font-weight: bold;
+            border-radius: 5%;
+            text-align: center;
+            padding: 5px;
+            
+        }
+        button{
+            height: 2vw;
+            width: 4vw;
+            background-color: red;
+            color: white;
+            border-radius: 5%;
+
+        }
+        .p{
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <div class="div1" id="div1">
+        <div class="div2">
+                    <input type="text" class="inp1" id="inp1">
+                 <button class="btn1" id="btn1">addTask</button>
+        </div>
+       
+    </div>
+    <script>
+        document.getElementById("btn1").addEventListener("click",()=>
+        {
+            let div1=document.getElementById("div1");
+        let new1=document.createElement("div");
+        new1.setAttribute("id","newDiv");
+        div1.append(new1);
+
+        let p=document.createElement("p");
+        
+        let b1=document.createElement("button");
+            b1.innerText="mark";
+        let b2=document.createElement("button");
+        b2.innerText="remove";
+
+        new1.append(p,b1,b2);
+
+
+        let inpValue=document.getElementById("inp1").value;
+        p.innerText=inpValue;
+
+
+        
+        b2.addEventListener("click",()=>
+        {1
+        
+            new1.remove();
+
+        })
+
+        b1.addEventListener("click",()=>
+        {   
+            p.classList.toggle("p") 
+        })
+    })
+    </script>
+</body>
+</html>

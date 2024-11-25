@@ -1,0 +1,1 @@
+document.getElementById("a").innerHTML="this is king"

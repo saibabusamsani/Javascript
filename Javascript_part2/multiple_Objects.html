@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let e1={
+            name:"sai"
+        }
+        let e2={
+            name:"abhi"
+        }
+        function a(){
+        console.log(this.name)
+        }
+        a.call(e1)
+        a.call(e2)
+    </script>
+</body>
+</html>

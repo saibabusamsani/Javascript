@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:rgb(255, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div id="one">
+            <input type="text" id="fetch" placeholder="add a new task..."><br><br>
+            <button id="btn" onclick="fun()">Submit</button>
+
+            <ul id="task"></ul>
+
+        </div>
+    </center>
+    <script>
+        function fun(){
+    let h=document.getElementById("fetch");
+    // console.log(h);
+
+    // h.value="hii";
+    let newi=h.value;
+    console.log(newi);
+
+
+    let ul=document.getElementById("task");
+    let li=document.createElement("li");
+    li.textContent=newi;
+    ul.appendChild(li);
+    h.value="";
+}
+    </script>
+</body>
+</html>

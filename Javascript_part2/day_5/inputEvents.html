@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input1">
+    <br><br>
+    <input type="text" id="input2">
+    <script>
+        let h1=document.getElementById("input1");
+        h1.addEventListener("input",()=>{
+            console.log("hii")
+        })
+
+        let h2=document.getElementById("input2");
+        h2.addEventListener("input",()=>{
+            h2.addEventListener("change",()=>{
+                console.log("bye")
+            })
+        })
+    </script>
+</body>
+</html>

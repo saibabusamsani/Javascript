@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let form=document.createElement("form");
+        document.body.append(form);
+
+        let center=document.createElement("center");
+
+
+        let user=document.createElement("label");
+        user.setAttribute("for","name");
+        user.innerText="name :"
+
+        let userInput=document.createElement("input");
+        userInput.setAttribute("id","name");
+        userInput.setAttribute("type","text");
+        userInput.setAttribute("placeholder","ennter your name")
+        let heading=document.createElement("h1");
+        heading.innerText="Google Form";
+
+
+        let email=document.createElement("label");
+        email.innerText="email"
+        email.setAttribute("for","email");
+
+        let emailInput=document.createElement("input");
+        emailInput.setAttribute("id","email")
+        emailInput.setAttribute("type","email");
+
+        let b=document.createElement("br");
+        let b1=document.createElement("br");
+        let b2=document.createElement("br");
+        
+        
+
+        let password=document.createElement("label");
+        password.setAttribute("for","pa");
+        password.innerText="password";
+
+        let passwordInput=document.createElement("input");
+        passwordInput.setAttribute("type","password");
+        passwordInput.setAttribute("id","pa")
+
+        let submit=document.createElement("button");
+        submit.innerText="Submit";
+
+        document.body.append(center);
+        center.append(form);
+        form.append(heading,user,userInput,b,email,emailInput,b1,password,passwordInput,b2,submit);
+        let a=form.style;
+
+        a.background="blue";
+        a.height="40vw";
+        a.width="40vw";
+       document.body.style.background="red";
+       
+
+
+
+
+
+
+    </script>
+</body>
+</html>

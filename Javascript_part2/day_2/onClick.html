@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let pCount=0;
+        let cCount=0;
+        function fun(){
+            pCount=cCount;
+            cCount++;
+            let current=document.getElementById("c");
+            current.innerHTML=cCount;
+
+            let previous=document.getElementById("p");
+            previous.innerHTML="previousCount :"+pCount;
+        }
+
+    </script>
+</head>
+<body>
+    <div id="c">0</div>
+    <div id="p">PreviousCount : 0</div>
+    <button onclick="fun()">Increment</button>
+</body>
+</html>

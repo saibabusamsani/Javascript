@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let student={
+            name:"sai",
+            place:"hyd",
+            fun:function(state,country){
+                console.log(this.name+" from "+this.place+","+state+","+country);
+            }
+        }
+        let student2={
+            name:"ranju",
+            place:"hyd",
+         }
+         student.fun("telengana","india");
+
+         student.fun.call(student2,"ap","india");
+         student.fun.call(student2,"telegana","india");
+         let check=student.fun.bind(student2,"mumbai","maharastra")
+         console.log(check)
+         check(); b 
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=["hii","hello","bye","hello"];
+        console.log(arr.includes("good"));
+        console.log(arr.lastIndexOf("hello"));
+
+
+        let fruit=["apple","mango"];
+        let veg=["tomato","onion"];
+        console.log(fruit.concat(veg));
+
+        let n=[1,2,3,4,5];
+        console.log(n.slice(0,3));
+
+
+       
+        let a=n.splice(0,3,"hii","bur","rohit","king ","kohli")
+        console.log(n)
+
+        let newarr=[1,2,3,4,5,6,7,8,9];
+        // newarr.forEach(n=>{
+        //     console.log(n);
+        // })
+        newarr.map(n=>{
+            console.log(n);
+        })
+
+        //filter the array
+        let num2=[1,2,3,4,5,6,7,8]
+        let check1=num2.filter((d)=>
+        {
+            return d%2==0;
+        });
+        console.log(check1)
+
+        //sum of elements
+
+        let num3=[1,2,3,4,5,6,7,8,9];
+        let b=num3.reduce((acc,curr)=>
+        {
+            return acc+=curr;
+        }
+        )
+        console.log(b)
+
+
+
+
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

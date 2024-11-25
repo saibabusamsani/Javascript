@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // //normal function without return 
+        // function a(x,y){
+        //     x+y;
+        // }
+        // console.log(a(10,20));
+        // //arrow function without "return" (implicit  default value "return" )
+        // let b=(x,y)=>x+y;
+        // console.log(b(10,20));
+        
+
+        // let c=(x,y)=>{
+        //     return x+y;
+        // }
+        // console.log(c(50,30));
+
+ 
+        // function outer()
+        // {
+        //     console.log("outer");
+        //     function inner()
+        //     {
+        //         console.log("inner html");
+        //     }
+        //     return inner;
+        // }
+        // outer()();
+
+
+        // function one(){
+        //     console.log("parent function");
+        //     let a=10;
+        //     console.log(a);
+        //     function two(){
+        //         console.log("child function");
+        //         let b=20;
+        //         console.log(b);
+        //         console.log(a+b);
+        //     }
+        //    two();
+        // }
+        // one();
+
+
+        let num1=prompt("enter number");
+        console.log(typeof num1);
+        let num2=Number(num1);
+        console.log(typeof num2);
+        function outer()
+        {
+            if(isNaN(num2))
+            {
+                alert("pleace enter number");
+            }
+            function inner()
+            {
+                if(num%2==0)
+                {
+                    console.log("even number")
+                }
+                else{
+                    console.log("odd number")
+                }
+            }
+            inner();
+        }
+        outer();
+
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let emp={
+            name:"king",
+            place:"bangalore",
+            skills:{
+                tech:"js",
+                network:"devops"
+            }
+            
+
+        }
+        console.log(emp.name);
+        emp.subject="angular";
+        console.log(emp);
+        emp.place="hyderabad";
+        console.log(emp);
+        console.log(emp.skills.tech)
+
+        //lets frresze the objects(emp)
+        Object.freeze(emp);
+
+        //lets check object is freeze or not 
+        let check=Object.isFrozen(emp);
+        console.log(check);
+
+        //lets the existing property 
+        emp.name="rohit";
+        console.log(emp);
+
+        //lets add new property to sub object (skills)
+        emp.skills.backend="python";
+        console.log(emp.skills);
+
+        //lets change existing sub objcect property
+
+        emp.skills.tech="node js";
+        console.log(emp.skills);
+
+        //seiling the object
+        Object.seal(emp);
+        console.log(Object.isSealed(emp));
+
+        console.log("*************************************************************");
+
+        let emp2={
+            name:"sai",
+            place:"hyderabad";
+            lan:{
+                speak:"telugu",
+                write:"english",
+            }
+        }
+        //lets seal the objects(emp2)
+        Object.seal(emp2);
+        
+        //check sealed or not
+        console.log(check(Object.isSealed(emp2)));
+
+        //lets add new property
+
+        emp2.skills="html";
+        console.log(emp2);
+
+        //lets add existing property
+        emp2.place="goa";
+        console.log(emp2.place)
+
+        //lets add new property to be sub objects;
+        emp2.lan.speak="hindi";
+        console.log(emp.lan);
+
+        
+        
+
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

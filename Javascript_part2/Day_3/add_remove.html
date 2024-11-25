@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h2" class="first"></h1>
+    <h1 id="two"></h1>
+
+   <div id="div" class="div" >
+    it is a div tag
+
+   </div>
+    <script>
+        let h=document.getElementById("h2");
+        console.log(h);
+        console.log(h.className);
+
+        let h2=document.getElementById("two");
+        console.log(h2);
+        h2.className="hii";
+        console.log(h2.className);
+
+
+
+
+        let d=document.getElementById("div");
+        console.log(d);
+        console.log(d.classList);
+        //add new values to class attribute
+        d.classList.add("first","sec","third");
+
+        //remove values from class attribute
+        d.classList.remove("sec");
+
+
+        //replace value from class attribute
+
+        d.classList.replace("first","good");
+
+        //toggling if value is present ,it removes
+        //else it replace
+
+        d.classList.toggle("third");
+        d.classList.toggle("four");
+
+
+
+
+
+    </script>
+</body>
+</html>

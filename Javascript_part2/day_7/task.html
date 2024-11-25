@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter the Color" id="input">
+    <script>
+        let inp=document.getElementById("input");
+        console.log(inp);
+
+        inp.addEventListener("input",()=>{
+            let i=inp.value;
+            document.body.style.background=i;
+            console.log(i);
+        })
+    </script>
+</body>
+</html>

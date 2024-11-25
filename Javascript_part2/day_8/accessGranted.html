@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           height: 100vh;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           background-color: red;
+        }
+        div{
+            height: 20vw;
+            width: 25vw;
+            background-color:purple;
+            border-radius: 5%;
+            /* position: relative; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            row-gap: 2vw;
+
+        }
+        #first{
+           background-color: black;
+           z-index: 1;
+           position: absolute;
+        }
+
+        .st{
+            height: 3vw;
+            width: 80%;
+            background-color: blueviolet;;
+            color: white;
+            font-size: 1.5vw;
+            font-weight: bold;
+        }
+        #second{
+            font-size: 5vw;
+            background-color: black;
+            color: white;
+            /* display: none; */
+            /* visibility: hidden; */
+            /* position: absolute; */
+            z-index: -1;
+
+
+            
+        }
+        h3{
+            color: white;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="first" >
+        <input type="text" placeholder="enter otp" class="st" class="f" id="user">
+        <button class="st" id="g">Generate OTP</button>
+        <button class="st" id="g1">Submit</button>
+        <h3 id="h3" ></h3>
+    </div>
+    <div id="second"></div>
+    <script>
+        let random=Math.ceil(Math.random()*(9999-1000)+1000);
+        // console.log(random)
+        let h=document.getElementById("g");
+        h.addEventListener("click",()=>{
+            document.getElementById("second").textContent=random;
+            document.getElementById("second").style.zIndex="2";
+
+        })
+        let b1=document.getElementById("g1");
+        b1.addEventListener("click",()=>{
+            let otp=document.getElementById("user").value;
+        if(otp==random)
+        {
+            document.getElementById("h3").textContent="Access Granted";
+        }
+        else{
+
+            document.getElementById("h3").textContent="Access Denied";
+        }
+
+        
+        }) 
+            
+    </script>
+</body>
+</html>

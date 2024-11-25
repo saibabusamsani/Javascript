@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            color: red;
+            border: none;
+            border-bottom: 2px solid blue;
+            background-color: white;
+        }
+    </style>
+    
+</head>
+<body>
+    <button onclick="exceute()">Click</button>
+    <button ondblclick="ex1()">doubleClick</button>
+    <button onmouseover="ex2()">OnMouseOver</button>
+    <button onmousedown="ex3()">onmousedown</button>
+    <button onmouseout="ex4()">onmouseout</button>
+    <button onmouseup="ex5()">onmouseup</button>
+    <script>
+        function exceute()
+        {
+            console.log("on click is executed")
+        }
+        function ex1()
+        {
+            console.log("double click is executed")
+        }
+        function ex2()
+        {
+            console.log("on mouse over is executed")
+        }
+        function ex3()
+        {
+            console.log("on mouse down is executed")
+        }
+       function ex4()
+        {
+            console.log("on mouseOut is executed")
+        } 
+       function ex5()
+        {
+            console.log("on mouseUp is executed")
+        } 
+        
+    </script>
+</body>
+</html>

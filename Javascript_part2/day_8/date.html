@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let d=new Date();
+        console.log(d);
+
+        //only date
+        console.log(d.getDate())
+
+        //only montth
+        console.log("month"+d.getMonth()+1);
+        console.log(d.getFullYear());
+        console.log(d.getHours()-12);
+        console.log(d.getMinutes())
+        console.log(d.getMilliseconds())
+        console.log(d.getDay())
+        
+
+        //its directly not possible for day="friday"
+
+        let day=["mon","tue","wed","thur","fri","sat","sun"];
+        console.log(day[d.getDay()-1]);
+
+        //to get only date and time
+
+        console.log(d.toLocaleString())
+
+        //to get only time
+        console.log(d.toTimeString());
+
+        //to print date
+        console.log(d.toISOString());
+
+        //to create our own date 
+        let mydate=new Date(2024,0,20);
+        console.log(mydate);
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            animation: move linear infinite;
+        }
+        @keyframes move{
+        
+            100%{
+                transform: rotate(360deg);
+            }
+            
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 5vw;
+        }
+    </style>
+</head>
+<body>
+   <img src="./fan.jpeg" id="img"> 
+   <div>
+    <button id="on" >On</button>
+    <button id="off" >off</button>
+    <button id="f1" >1</button>
+    <button id="f2" >2</button>
+    <button id="of3" >3</button>
+
+
+   </div>
+   <script>
+    let img=document.getElementById("img");
+    document.getElementById("on").addEventListener("click",()=>{
+        img.style.animationDuration=3+"s";
+    })
+    document.getElementById("off").addEventListener("click",()=>{
+        img.style.animationDuration=0+"s";
+    })
+    document.getElementById("f1").addEventListener("click",()=>{
+        img.style.animationDuration=1+"s";
+    })
+    document.getElementById("f2").addEventListener("click",()=>{
+        img.style.animationDuration=0.5+"s";
+    })
+    document.getElementById("f3").addEventListener("click",()=>{
+        img.style.animationDuration=0.1+"s";
+    })
+
+    
+   </script>
+</body>
+</html>

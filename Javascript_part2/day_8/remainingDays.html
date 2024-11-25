@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let d=new Date();
+        let days=[31,28,31,30,31,30,31,31,30,31,30,31];
+        let totalDays=days[d.getMonth()];
+        let rem=totalDays-d.getDate();
+
+        console.log(`remaining days of ${d.toDateString()} : ${rem}days`);
+        
+    </script>
+</body>
+</html>

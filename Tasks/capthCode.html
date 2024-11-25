@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body
+    {
+      /* background-color: purple; */
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .article1{
+      background-color: red;
+      height: 25vw;
+      width: 25vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      row-gap: 4vw;
+    }
+    nav{
+      height: 3.5vw;
+      width: 90%;
+      background-color: bisque;
+    }
+    .div2{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      row-gap: 1vw;
+    }
+    .nav1{
+      width: 50%;
+      font-size: 2vw;
+      padding: 1vw;
+      height: 2vw;
+      color: blue;
+      font-weight: bold;
+    }
+    #b{
+      outline: none;
+      border: none;
+      color: blue;
+      background-color: transparent;
+    }
+    .input{
+      height: 1.5vw;
+      width: 60%;
+      font-size: 1.5vw;
+      padding: 1vw;
+    }
+  
+    .article2{
+    position: relative;
+    animation: move 1s 1 ease-in-out;
+    /* background-color: skyblue; */
+      height: 3vw;
+      font-size: 3vw;
+      background: linear-gradient(75deg,pink,purple,pink);
+      background-size: 1500px;
+      color: transparent;
+      -webkit-background-clip: text;
+
+
+    }
+    @keyframes rainbow{
+      from{
+        background-position: 1500px;
+      }
+      to{
+        background-position: 0px;
+      }
+    }
+    @keyframes move{
+      from{
+        transform: translateY(0vw);
+      }
+      to{
+        transform: translateY(-17vw);
+      }
+    }
+    .article1{
+        position: absolute;
+        z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <article class="article1">
+    <div class="div1"> 
+      <label for="no">Hallticket number</label>
+      <input type="text" placeholder="Y19CS32">
+    </div>
+
+    <div class="div2">
+      <nav class="nav1" id="nav1">hxg3n9</nav>
+      <nav class="cl"><p>Enter captcha can't read the image?click <button id="b">here</button> to refresh</p></nav>
+      <input type="text" class="input" id="input">
+      
+    </div>
+
+
+    
+    <button id="submit">Submit</button>
+  </article>
+  <article  id="article2" ></article>
+  <script>
+  
+    let clikcHere=document.getElementById("b");
+      
+      clikcHere.addEventListener("click",()=>
+      {
+        let nF='0';
+        nF=nF.codePointAt();
+        let nT=nF+9;
+       let number= Math.floor(Math.random()*(nT-nF)+nF);
+
+
+       let lF='a';
+       lF=lF.codePointAt();
+       let lT=lF+25;
+       let lower=Math.floor(Math.random()*(lT-lF)+lF);
+
+       let uF='A';
+       uF=uF.codePointAt();
+       let uT=uF+25;
+       let upper=Math.floor(Math.random()*(uT-uF)+uF);
+
+
+        let arr=[number,lower,upper];
+        let a=Math.floor(Math.random()*(3));
+        let b=Math.floor(Math.random()*(3));
+        let c=Math.floor(Math.random()*(3));
+        let d=Math.floor(Math.random()*(3));
+        let e=Math.floor(Math.random()*(3));
+        let f=Math.floor(Math.random()*(3));
+        let text=String.fromCodePoint(arr[a],arr[b],arr[c],arr[d],arr[e],arr[f]);
+        console.log(text)
+        
+        document.getElementById("nav1").textContent=text;
+      })
+
+
+      let submit=document.getElementById("submit");
+      submit.addEventListener("click",()=>
+      {
+        let inp=document.getElementById("input").value;
+        let out=document.getElementById("nav1").innerText;
+        if(inp==out)
+        {
+         let d= document.getElementById("article2");
+         d.classList.remove("article2");
+          d.classList.add("article2");
+          document.getElementById("article2").textContent="Access Granted";
+        }
+        else
+        {
+          document.getElementById("article2").textContent="Access Denied";
+        }
+
+       
+      })
+      
+  </script>
+</body>
+</html>

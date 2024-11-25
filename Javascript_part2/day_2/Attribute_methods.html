@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h2 class="one" id="h2"></h2>
+    <input type="text" id="input">
+    <script>
+
+        let h=document.getElementById("h2");
+        console.log(h);
+
+        console.log(h.getAttribute("class"));
+        console.log(h.getAttribute("id"));
+        console.log(h.getAttribute("src"));
+        let i=document.getElementById("input");
+        console.log(i);
+        console.log(i.getAttribute("type"));
+        console.log(i.getAttribute("id"));
+
+        //set attributes
+
+        i.setAttribute("class","two");
+
+        i.setAttribute("id","input10");
+
+        //check whether the id attribute is present or not
+        console.log(i.getAttribute("id"))   
+
+        //remove attribute
+
+        i.removeAttribute("id");
+
+        console.log(i.getAttribute("id"));
+
+        console.log(i.hasAttribute("id"))
+        console.log(i.hasAttribute("class"))
+        
+    </script>
+</body>
+</html>
